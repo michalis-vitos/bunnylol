@@ -151,7 +151,7 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     todo: {
         name: "Todoist",
         url: "https://todoist.com/app/today",
-        searchurl: "https://todoist.com/app/search/test"
+        searchurl: "https://todoist.com/app/search/"
     },
     DEFAULT: {
         name: "Default - Google Search",
