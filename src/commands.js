@@ -6,8 +6,8 @@ export type CommandType = {|
     searchurl?: string,
 |};
 
-export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
-                           'c' | 'wf' | '$' | 'cal' | 'uvacovid' | 'hs' | 'p' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
+export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'yt' | 'tv' | 'gh' | 'r' | 'ln' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
+                           'c' | '$' | 'cal' | 'hs' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
     name: string, 
@@ -45,20 +45,12 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     gm: {
         name: "Gmail",
         url: "https://mail.google.com/mail/u/0",
-        searchurl: "https://mail.google.com/mail/u/"
+        searchurl: "https://mail.google.com/mail/u/0/#search/"
     },
     gd: {
         name: "Google Drive",
         url: "https://drive.google.com/drive/u/0",
-        searchurl: "https://drive.google.com/drive/u/"
-    },
-    sis: {
-        name: "UVA SIS",
-        url: "https://sisuva.admin.virginia.edu/psc/ihprd/UVSS/SA/s/WEBLIB_HCX_GN.H_SPRINGBOARD.FieldFormula.IScript_Main",
-    },
-    col: {
-        name: "UVA Collab",
-        url: "https://collab.its.virginia.edu/portal",
+        searchurl: "https://drive.google.com/drive/u/0/search?q="
     },
     yt: {
         name: "YouTube",
@@ -79,9 +71,10 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         url: "https://reddit.com/",
         searchurl: "https://www.reddit.com/search?q="
     },
-    l: {
+    ln: {
         name: "Linkedin",
         url: "https://linkedin.com/",
+        searchurl: "https://www.linkedin.com/search/results/all/?keywords="
     },
     ig: {
         name: "Instagram",
@@ -92,10 +85,6 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         name: "Twitter",
         url: "https://twitter.com/",
         searchurl: "https://twitter.com/search?q="
-    },
-    me: {
-        name: "Rithik.me - Personal Website",
-        url: "https://rithik.me/me",
     },
     g: {
         name: "Google",
@@ -132,17 +121,9 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         url: "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
         searchurl: "https://www.amazon.com/s?i=instant-video&ref=nb_sb_noss_2&k="
     },
-    p: {
-        name: "Piazza",
-        url: "https://piazza.com/class"
-    },
     vs: {
         name: "VS Code",
         url: "vscode://",
-    },
-    wf: {
-        name: "Webflow",
-        url: "https://webflow.com/design/hoohacks"
     },
     hs: {
         name: "Hubspot",
@@ -162,18 +143,15 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         name: "Google Calendar",
         url: "https://calendar.google.com/calendar/r"
     },
-    uvacovid: {
-        name: "UVA COVID-19 Tracker",
-        url: "https://returntogrounds.virginia.edu/covid-tracker"
-    },
     wiki: {
         name: "Wikipedia",
         url: "https://en.wikipedia.org",
         searchurl: "https://en.wikipedia.org/wiki/"
     },
     todo: {
-        name: "Microsoft To Do",
-        url: "https://to-do.live.com"
+        name: "Todoist",
+        url: "https://todoist.com/app/today",
+        searchurl: "https://todoist.com/app/search/test"
     },
     DEFAULT: {
         name: "Default - Google Search",
